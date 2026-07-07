@@ -30,9 +30,15 @@
   html{scroll-behavior:smooth;}
   body{
     font-family:'Noto Sans SC',-apple-system,sans-serif;
-    background:var(--paper); color:var(--ink);
+    background:#0E1D16; color:var(--ink);
     font-weight:300; line-height:1.75; overflow-x:hidden;
     -webkit-font-smoothing:antialiased;
+  }
+  /* Mobile phone-column presentation (Muchow-style) */
+  .page{
+    width:100%; max-width:480px; margin:0 auto; position:relative;
+    background:var(--paper); overflow:hidden;
+    box-shadow:0 0 90px rgba(0,0,0,.55);
   }
   section{position:relative; overflow:hidden;}
   .pad{padding:56px 26px;}
@@ -59,10 +65,10 @@
   .small{font-size:13px; color:var(--mute); font-weight:300;}
 
   /* ---------- Progress ---------- */
-  .progress-track{position:fixed; top:0; left:0; right:0; height:3px; background:rgba(20,42,33,.08); z-index:100;}
+  .progress-track{position:fixed; top:0; left:0; right:0; max-width:480px; margin:0 auto; height:3px; background:rgba(20,42,33,.08); z-index:100;}
   .progress-fill{height:100%; width:0; background:linear-gradient(90deg,var(--moss),var(--tan)); transition:width .3s ease;}
   .counter{
-    position:fixed; top:14px; right:16px; z-index:100;
+    position:fixed; top:14px; left:50%; transform:translateX(calc(min(50vw, 240px) - 100% - 14px)); z-index:100;
     font-family:'Oswald',sans-serif; font-weight:500; font-size:12px; letter-spacing:2px;
     color:var(--forest); background:rgba(251,250,245,.82); backdrop-filter:blur(8px);
     padding:4px 11px; border-radius:20px; border:1px solid var(--line);
@@ -205,12 +211,6 @@
   .disclaimer{margin-top:36px; font-size:10.5px; color:#8A968C; line-height:1.7; font-weight:300; max-width:52ch; margin-left:auto; margin-right:auto;}
   .foot{margin-top:26px; font-family:'Oswald',sans-serif; font-size:11px; letter-spacing:1px; text-transform:uppercase; color:#7C8A7E;}
 
-  @media(min-width:620px){
-    .pad{padding:76px 12vw;}
-    .hero{padding:44px 12vw 52px;}
-    .use-grid,.nb-grid{grid-template-columns:repeat(3,1fr);}
-    .facts{grid-template-columns:repeat(4,1fr);}
-  }
 </style>
 </head>
 <body>
@@ -218,6 +218,7 @@
 <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
 <div class="counter" id="counter">01 / 10</div>
 
+<div class="page">
 <!-- ═══════ 01 HERO ═══════ -->
 <section class="hero" data-idx="1">
   <div class="hero-top">
@@ -427,24 +428,11 @@
   <img src="logo_white.png" alt="HeathWorks" class="contact-logo reveal d1">
   <h2 class="contact-h reveal d2">Secure Your<br><span>Opportunity</span></h2>
   <p class="contact-cn reveal d3">HeathWorks Heathwood · 25 Hub Crescent · 30 套精品工业单元 · 布里斯班西南增长走廊的新地标。</p>
-  <div class="agents reveal d4">
-    <div class="agent">
-      <div class="a-role">销售咨询 · Keenan Byrne</div>
-      <div class="a-name">Fraser Byrne</div>
-      <a href="tel:0439335811">0439 335 811</a>
-      <div class="a-email">fraser@keenanbyrne.com.au</div>
-    </div>
-    <div class="agent">
-      <div class="a-role">销售咨询 · Keenan Byrne</div>
-      <div class="a-name">Dan Poultney</div>
-      <a href="tel:0439798108">0439 798 108</a>
-      <div class="a-email">dan@keenanbyrne.com.au</div>
-    </div>
-  </div>
-  <div class="contact-addr reveal d5">25 Hub Crescent · <span>Heathwood QLD 4110</span></div>
+  <div class="contact-addr reveal d5" style="margin-top:30px;">25 Hub Crescent · <span>Heathwood QLD 4110</span></div>
   <p class="disclaimer reveal d5">效果图与图像仅供说明及概念参考，可能与最终设计、装置、配件或材料不符。所有面积、尺寸与饰面均为约数，可能在无通知情况下变更。仅《销售合同》所载条款具有法律约束力。购买者应自行核实。© Forma Projects. All rights reserved.</p>
   <div class="foot reveal d5">HeathWorks Heathwood · By Forma Projects © 2026</div>
 </section>
+</div>
 
 <script>
   const sections = Array.from(document.querySelectorAll('section[data-idx]'));
