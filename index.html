@@ -216,12 +216,23 @@
   .disclaimer{margin-top:36px; font-size:10.5px; color:#8A968C; line-height:1.7; font-weight:300; max-width:52ch; margin-left:auto; margin-right:auto;}
   .foot{margin-top:26px; font-family:'Oswald',sans-serif; font-size:11px; letter-spacing:1px; text-transform:uppercase; color:#7C8A7E;}
 
+  /* FAQ accordion */
+  .faq{margin-top:28px; border-top:1px solid var(--line);}
+  .faq details{border-bottom:1px solid var(--line);}
+  .faq summary{list-style:none; cursor:pointer; padding:18px 36px 18px 0; position:relative; font-size:15px; font-weight:500; color:var(--forest); line-height:1.55;}
+  .faq summary::-webkit-details-marker{display:none;}
+  .faq summary::after{content:'+'; position:absolute; right:2px; top:15px; font-family:'Oswald',sans-serif; font-weight:300; font-size:24px; color:var(--tan); transition:transform .2s;}
+  .faq details[open] summary::after{content:'–';}
+  .faq .ans{padding:0 0 20px; font-size:14px; color:#48564C; line-height:1.85; font-weight:300;}
+  .faq .ans strong{color:var(--forest); font-weight:500;}
+  .faq-note{margin-top:20px; font-size:11.5px; color:var(--mute); line-height:1.7; font-weight:300;}
+
 </style>
 </head>
 <body>
 
 <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
-<div class="counter" id="counter">01 / 10</div>
+<div class="counter" id="counter">01 / 11</div>
 
 <div class="page">
 <!-- ═══════ 01 HERO ═══════ -->
@@ -427,8 +438,26 @@
   </div>
 </section>
 
-<!-- ═══════ 10 CONTACT ═══════ -->
-<section class="contact" data-idx="10">
+<!-- ═══════ 10 FAQ ═══════ -->
+<section class="cream pad" data-idx="10">
+  <span class="lbl reveal d1">常见问题 · FAQ</span>
+  <h2 class="h2cn reveal d2">买家关心的问题</h2>
+  <div class="rule reveal d3"></div>
+  <div class="faq reveal d3">
+    <details><summary>可以进行食品制造或商业烘焙吗？</summary><div class="ans">属城市规划审批范畴，取决于规模及是否为附属用途。若并非面向公众的零售店铺，通常可行 —— 具体以最终规划审批为准。</div></details>
+    <details><summary>是否允许排气系统、冷藏室与隔油池？</summary><div class="ans">排气通向屋顶，一般无碍；<strong>冷藏室</strong>可在单元内设置；<strong>隔油池</strong>需设于地面以上，并位于本单元租区范围内。</div></details>
+    <details><summary>Body Corporate（业主立案法团）费用是多少？</summary><div class="ans">约 <strong>$4,786.85 / 年</strong>。</div></details>
+    <details><summary>底层（Ground Level）面积多大？</summary><div class="ans">底层 <strong>102m²</strong>，另含 36m² 夹层，合计 138m²。</div></details>
+    <details><summary>相邻单元未来可以打通合并吗？</summary><div class="ans">建议在<strong>竣工前</strong>完成合并，因分隔墙已按防火规范建造。</div></details>
+    <details><summary>可用电力容量（安培）是多少？</summary><div class="ans"><strong>三相电，标准 15 安培</strong>。如需更大容量，请尽早告知以便安排。</div></details>
+    <details><summary>是否接入天然气？</summary><div class="ans">无天然气接入；可在单元内使用<strong>瓶装燃气</strong>。</div></details>
+    <details><summary>预计市政费与保险费用？</summary><div class="ans">市政费约 <strong>$2,500 / 年</strong>；建筑保险（自用业主）约 <strong>$1,700 / 年</strong>。</div></details>
+  </div>
+  <p class="faq-note reveal d4">* 以上为开发商就常见咨询提供的参考信息，具体以最终《销售合同》、规划审批及披露文件为准。</p>
+</section>
+
+<!-- ═══════ 11 CONTACT ═══════ -->
+<section class="contact" data-idx="11">
   <img src="logo_white.png" alt="HeathWorks" class="contact-logo reveal d1">
   <h2 class="contact-h reveal d2">Secure Your<br><span>Opportunity</span></h2>
   <p class="contact-cn reveal d3">HeathWorks Heathwood · 25 Hub Crescent · 30 套精品工业单元 · 布里斯班西南增长走廊的新地标。</p>
