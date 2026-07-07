@@ -119,6 +119,11 @@
   .fact .k{font-family:'Oswald',sans-serif; font-size:11px; letter-spacing:1.5px; text-transform:uppercase; color:var(--moss); margin-bottom:7px;}
   .fact .v{font-size:16px; font-weight:500; color:var(--forest); line-height:1.35;}
   .fact .v small{display:block; font-weight:300; font-size:12.5px; color:var(--mute); margin-top:2px;}
+  .status-banner{display:flex; align-items:center; gap:13px; margin:2px 0 26px; padding:15px 18px; background:var(--forest); color:#fff; border-radius:6px; box-shadow:0 8px 22px rgba(20,42,33,.18);}
+  .status-banner .sb-dot{width:9px; height:9px; border-radius:50%; background:var(--moss-light); flex:0 0 auto; animation:pulse 2s ease-in-out infinite;}
+  .status-banner .sb-txt{font-size:14px; letter-spacing:.02em; line-height:1.5;}
+  .status-banner strong{font-weight:600; color:var(--tan);}
+  @keyframes pulse{0%,100%{box-shadow:0 0 0 4px rgba(143,184,156,.28);}50%{box-shadow:0 0 0 8px rgba(143,184,156,.06);}}
 
   /* ═══════ 04 LOCATION ═══════ */
   .connect{margin-top:30px; border-top:1px solid var(--line);}
@@ -251,10 +256,14 @@
 </section>
 
 <!-- ═══════ 03 INTRODUCTION / FAST FACTS ═══════ -->
-<section class="pad" data-idx="3">
+<section class="pad" data-idx="3" id="intro">
   <span class="lbl reveal d1">项目介绍 · HeathWorks Heathwood</span>
   <h2 class="h2cn reveal d2">设计邂逅需求 · 精品小面积仓库</h2>
   <div class="rule reveal d3"></div>
+  <div class="status-banner reveal d3">
+    <span class="sb-dot"></span>
+    <span class="sb-txt"><strong>项目已开工建设中</strong> · 预计 2027 年初交割</span>
+  </div>
   <p class="body reveal d3">HeathWorks 坐落于昆士兰最具活力的物流枢纽之一，为 <strong>贸易、仓储与电商运营</strong> 量身打造。每个单元兼具建筑美学与实用功能，配备夹层办公空间，是敏捷型中小企业的理想选择。</p>
   <p class="body reveal d3" style="margin-top:14px;">项目周边环绕 <strong>Asahi、Woolworths、DHL</strong> 等国家级运营商，受益于卓越的高速路连通性、有限的供应、上升的租金与稳定的资本增长 —— 这是布里斯班最受追捧工业市场中难得的持有机会。</p>
   <div class="facts reveal d4">
@@ -265,7 +274,7 @@
     <div class="fact"><div class="k">分区</div><div class="v">工业 / 物流<small>Industry / Logistics</small></div></div>
     <div class="fact"><div class="k">停车</div><div class="v">2 车位 / 单元<small>另设 8 个访客车位</small></div></div>
     <div class="fact"><div class="k">高速路</div><div class="v">500m<small>直达 Logan Motorway</small></div></div>
-    <div class="fact"><div class="k">预计交付</div><div class="v">Q4 2026<small>Estimated Completion</small></div></div>
+    <div class="fact"><div class="k">预计交割</div><div class="v">2027 年初<small>已开工 · Under Construction</small></div></div>
   </div>
 </section>
 
